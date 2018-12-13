@@ -1,39 +1,20 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+
+import Header from './header'
 
 import Home from './pages/home'
 import About from './pages/about'
 import Topics from './pages/topics'
 
-// import Default from './layout/default'
-// import UserLayout from './layout/user'
-
-class App extends React.Component {
-  render() {
-    return (
-      <Router>
-        <>
-          {/* <Route path="/" component={Default} />
-          <Route path="/user" component={UserLayout} /> */}
-          <ul>
-            <li>
-              <Link to="/">首页</Link>
-            </li>
-            <li>
-              <Link to="/about">关于</Link>
-            </li>
-            <li>
-              <Link to={`/topics/thisIsTopicId`}>主题列表</Link>
-            </li>
-          </ul>
-          <hr />
-          <Route exact path="/" component={Home} />
-          <Route path="/about" component={About} />
-          <Route exact path="/topics/:topicID" component={Topics} />
-        </>
-      </Router>
-    )
-  }
-}
-
-export default App
+export default ({ match }) => (
+  <Router>
+    <>
+      <Header match={match} />
+      <hr />
+      <Route exact path={`${match.path}`} component={Home} />
+      <Route path={`${match.path}/about`} component={About} />
+      <Route path={`${match.path}/topics`} component={Topics} />
+    </>
+  </Router>
+)
