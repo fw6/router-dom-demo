@@ -34,25 +34,20 @@ const PEEPS = [
   }
 ]
 
-const find = id => PEEPS.find(p => p.id === id)
+const find = id => PEEPS.find(p => p.id === parseInt(id))
 
-export default () => (
-  <Person
-    match={{
-      params: { id: 0 },
-      url: ''
-    }}
-  />
-)
+export default ({ match }) => {
+  match.params.id = 0
+  return <Person match={match} />
+}
 
 function Person({ match }) {
   let person = find(match.params.id)
-
   return (
     <>
       <h3>
         {person.name}
-        's Friend
+        's Friends
       </h3>
       <ul>
         {person.friends.map(id => (

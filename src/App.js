@@ -9,6 +9,11 @@ import ExampleFour from './examples/example-4'
 import ExampleFive from './examples/example-5'
 import ExampleSix from './examples/example-6'
 import ExampleSeven from './examples/example-7'
+import ExampleEight from './examples/example-8'
+import ExampleNine from './examples/example-9'
+import ExampleTen from './examples/example-10'
+import ExampleEleven from './examples/example-11'
+// import Examole
 
 export default class App extends React.Component {
   render() {
@@ -26,6 +31,10 @@ export default class App extends React.Component {
           <Route path="/example-5" component={ExampleFive} />
           <Route path="/example-6" component={ExampleSix} />
           <Route path="/example-7" component={ExampleSeven} />
+          <Route path="/example-8" component={ExampleEight} />
+          <Route path="/example-9" component={ExampleNine} />
+          <Route path="/example-10" component={ExampleTen} />
+          <Route path="/example-11" component={ExampleEleven} />
         </>
       </Router>
     )

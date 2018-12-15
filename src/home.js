@@ -25,6 +25,18 @@ export default function() {
       <li>
         <Link to="/example-7">EXAMPLE-7 Recursive Paths</Link>
       </li>
+      <li>
+        <Link to="/example-8">EXAMPLE-8 Sidebar</Link>
+      </li>
+      <li>
+        <Link to="/example-9">EXAMPLE-9 Animated Transitions</Link>
+      </li>
+      <li>
+        <Link to="/example-10">EXAMPLE-10 Ambiguous Matches</Link>
+      </li>
+      <li>
+        <Link to="/example-11">EXAMPLE-11 Route Config</Link>
+      </li>
     </ol>
   )
 }
