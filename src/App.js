@@ -13,7 +13,7 @@ import ExampleEight from './examples/example-8'
 import ExampleNine from './examples/example-9'
 import ExampleTen from './examples/example-10'
 import ExampleEleven from './examples/example-11'
-// import Examole
+import ExampleTwelve from './examples/example-12'
 
 export default class App extends React.Component {
   render() {
@@ -22,7 +22,6 @@ export default class App extends React.Component {
         <>
           <Home />
           <hr />
-
           <Route exact path="/" />
           <Route path="/example-1" component={ExampleOne} />
           <Route path="/example-2" component={ExampleTwo} />
@@ -35,6 +34,7 @@ export default class App extends React.Component {
           <Route path="/example-9" component={ExampleNine} />
           <Route path="/example-10" component={ExampleTen} />
           <Route path="/example-11" component={ExampleEleven} />
+          <Route path="/example-12" component={ExampleTwelve} />
         </>
       </Router>
     )
