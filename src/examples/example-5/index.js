@@ -37,6 +37,7 @@ class Form extends React.Component {
           }))
         }}
       >
+        {/* 阻止用户导航提示框 */}
         <Prompt
           when={isBlocking}
           message={location =>

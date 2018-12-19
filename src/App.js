@@ -14,6 +14,7 @@ import ExampleNine from './examples/example-9'
 import ExampleTen from './examples/example-10'
 import ExampleEleven from './examples/example-11'
 import ExampleTwelve from './examples/example-12'
+import ExampleFourteen from './examples/example-14'
 
 export default class App extends React.Component {
   render() {
@@ -35,6 +36,13 @@ export default class App extends React.Component {
           <Route path="/example-10" component={ExampleTen} />
           <Route path="/example-11" component={ExampleEleven} />
           <Route path="/example-12" component={ExampleTwelve} />
+          <Route
+            path="/example-13"
+            render={() => (
+              <h3>You would use the StaticRouter for server-side rendering</h3>
+            )}
+          />
+          <Route path="/example-14" component={ExampleFourteen} />
         </>
       </Router>
     )

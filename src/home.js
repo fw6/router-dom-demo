@@ -40,6 +40,12 @@ export default function() {
       <li>
         <Link to="/example-12"> EXAMPLE - 12 Modal Gallery </Link>
       </li>
+      <li>
+        <Link to="/example-13"> EXAMPLE - 13 StaticRouter Context </Link>
+      </li>
+      <li>
+        <Link to="/example-14"> EXAMPLE - 14 Query Parameters </Link>
+      </li>
     </ol>
   )
 }
